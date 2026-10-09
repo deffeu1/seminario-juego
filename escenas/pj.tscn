@@ -8,6 +8,12 @@ size = Vector2(34, 45.5)
 
 [node name="jugador" type="CharacterBody2D" unique_id=1656183556 groups=["jugador"]]
 script = ExtResource("1_7d6uc")
+velocidad = null
+vida_maxima = null
+zoom_normal = null
+zoom_combate = null
+velocidad_zoom = null
+distancia_deteccion_combate = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=861673745]
 texture = ExtResource("2_s2gj3")
@@ -27,3 +33,6 @@ offset_bottom = -23.0
 value = 100.0
 show_percentage = false
 metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1888237895]
+position_smoothing_enabled = true
