@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://myh40vrild1l"]
+
+[ext_resource type="Script" uid="uid://cumqbgqkdokr5" path="res://scripts/pocion.gd" id="1_mxec3"]
+[ext_resource type="Texture2D" uid="uid://bvwthk8d3kxn1" path="res://assets2d/curacion/4fe7858f34cdd0cdba3ff384b80d246d-corazon-rojo-en-pixel-art.webp" id="2_0hwxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxx81"]
+size = Vector2(35, 34)
+
+[node name="corazones" type="Node2D" unique_id=1142521867]
+
+[node name="pocion" type="Area2D" parent="." unique_id=136735474]
+script = ExtResource("1_mxec3")
+
+[node name="Sprite2D" type="Sprite2D" parent="pocion" unique_id=1682781245]
+position = Vector2(7.187498, 6.7499976)
+scale = Vector2(0.069580086, 0.06738282)
+texture = ExtResource("2_0hwxw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pocion" unique_id=152144956]
+position = Vector2(7.5, 7)
+shape = SubResource("RectangleShape2D_fxx81")

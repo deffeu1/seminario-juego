@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ban2ucd8yka43" path="res://escenas/bala.tscn" id="2_26pgj"]
 [ext_resource type="PackedScene" uid="uid://bsvret2hmrufq" path="res://escenas/enemigo.tscn" id="3_dkga6"]
 [ext_resource type="PackedScene" uid="uid://btk7tm6m2yuc5" path="res://escenas/barrera.tscn" id="5_dkga6"]
+[ext_resource type="PackedScene" uid="uid://myh40vrild1l" path="res://escenas/pocion.tscn" id="7_o8odp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a8p2b"]
 texture = ExtResource("1_26pgj")
@@ -28706,3 +28707,9 @@ escena_bala = ExtResource("2_26pgj")
 [node name="enemigo5" parent="los193021391enemigos" unique_id=2041322762 instance=ExtResource("3_dkga6")]
 position = Vector2(1014, 117)
 escena_bala = ExtResource("2_26pgj")
+
+[node name="corazones" parent="." unique_id=1142521867 instance=ExtResource("7_o8odp")]
+position = Vector2(216, -190)
+
+[node name="corazones1" parent="." unique_id=1596080628 instance=ExtResource("7_o8odp")]
+position = Vector2(-424, -253)

@@ -76,3 +76,14 @@ func comprobar_enemigos_cercanos() -> bool:
 				if distancia <= distancia_deteccion_combate:
 					return true
 	return false
+
+func curar(cantidad: int) -> bool:
+
+	if vida_actual >= vida_maxima:
+		return false
+	vida_actual += cantidad
+	if vida_actual > vida_maxima:
+		vida_actual = vida_maxima
+	if barra_vida:
+		barra_vida.value = vida_actual
+	return true 
