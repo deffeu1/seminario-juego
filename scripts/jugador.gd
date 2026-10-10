@@ -8,8 +8,8 @@ var vida_actual: int
 
 @export var zoom_normal: Vector2 = Vector2(1.4,1.4)
 @export var zoom_combate: Vector2 = Vector2(0.9,0.9)
-@export var velocidad_zoom: float = 4.0
-@export var distancia_deteccion_combate: float = 350.0
+@export var velocidad_zoom: float = 8
+@export var distancia_deteccion_combate: float = 300
 
 @onready var mira: Marker2D = $mira
 @onready var barra_vida: ProgressBar = $vida
@@ -30,7 +30,10 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	look_at(get_global_mouse_position())
-	
+	#if barra_vida:
+		#barra_vida.rotation = -rotation
+		#var offset_arriba := Vector2(-25, 24).rotated(-rotation)
+		#barra_vida.position = offset_arriba
 	
 	if Input.is_action_just_pressed("disparar"):
 		disparar()
