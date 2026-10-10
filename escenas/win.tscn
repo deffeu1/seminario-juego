@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dwasslb1rocyb"]
+
+[ext_resource type="Script" uid="uid://by77082qcdjeh" path="res://scripts/win.gd" id="1_6ekve"]
+
+[node name="win" type="Control" unique_id=525880587]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6ekve")
+
+[node name="Label" type="Label" parent="." unique_id=780960671]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 481.0
+offset_top = 293.0
+offset_right = 655.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "bien ganaste sos crack"
+
+[node name="Button" type="Button" parent="." unique_id=1392189196]
+layout_mode = 1
+offset_left = 527.0
+offset_top = 367.0
+offset_right = 607.0
+offset_bottom = 398.0
+text = "reiniciar?"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

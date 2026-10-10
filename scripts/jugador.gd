@@ -9,8 +9,8 @@ var vida_actual: int
 @export var zoom_normal: Vector2 = Vector2(1.4,1.4)
 @export var zoom_combate: Vector2 = Vector2(0.9,0.9)
 @export var velocidad_zoom: float = 8
-@export var distancia_deteccion_combate: float = 300
-
+@export var distancia_deteccion_combate: float = 200
+@export var escena_game_over: PackedScene 
 @onready var mira: Marker2D = $mira
 @onready var barra_vida: ProgressBar = $vida
 @onready var camara: Camera2D = $Camera2D
@@ -55,7 +55,8 @@ func recibir_dano(cantidad: int) -> void:
 	if barra_vida:
 		barra_vida.value = vida_actual
 	if vida_actual <= 0:
-		queue_free() 
+		get_tree().call_deferred("change_scene_to_file", "res://escenas/perdiste.tscn")
+
 
 func actualizar_zoom_camara(delta:float) -> void:
 	if not camara:

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://btk7tm6m2yuc5"]
+
+[ext_resource type="Script" uid="uid://55gkc7pkl3f" path="res://scripts/barrera.gd" id="1_wj3wc"]
+[ext_resource type="Texture2D" uid="uid://dltbc7w1m11ah" path="res://assets2d/barrera/zj1ynR.png" id="2_hqoj4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyksw"]
+size = Vector2(34, 38.5)
+
+[node name="barriles" type="Node2D" unique_id=2059928572]
+
+[node name="Barrera" type="StaticBody2D" parent="." unique_id=456624127]
+script = ExtResource("1_wj3wc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Barrera" unique_id=578341063]
+position = Vector2(-1, 0)
+scale = Vector2(0.16111112, 0.15199997)
+texture = ExtResource("2_hqoj4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrera" unique_id=380072730]
+position = Vector2(-1, 0.25)
+shape = SubResource("RectangleShape2D_gyksw")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c7723gj1nc5l8"]
+
+[ext_resource type="Script" uid="uid://dr2h85y00vjjc" path="res://scripts/perdiste.gd" id="1_3ajrt"]
+
+[node name="perdiste" type="Control" unique_id=524830337]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3ajrt")
+
+[node name="Label" type="Label" parent="." unique_id=1822365623]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 242.0
+offset_right = 647.0
+offset_bottom = 265.0
+text = "uuuuu mal ahi, la proxima será"
+
+[node name="Button" type="Button" parent="." unique_id=1915768986]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 304.0
+offset_right = 626.0
+offset_bottom = 335.0
+text = "dale, volve a intentarlo"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
