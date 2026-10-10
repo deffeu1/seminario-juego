@@ -2,10 +2,7 @@ extends CharacterBody2D
 
 @export var velocidad: float = 200.0
 @export var vida_maxima: int = 100
-
-var vida_actual: int
 @export var escena_bala: PackedScene
-
 @export var zoom_normal: Vector2 = Vector2(1.4,1.4)
 @export var zoom_combate: Vector2 = Vector2(0.9,0.9)
 @export var velocidad_zoom: float = 8
@@ -15,6 +12,7 @@ var vida_actual: int
 @onready var barra_vida: ProgressBar = $vida
 @onready var camara: Camera2D = $Camera2D
 
+var vida_actual: int
 
 func _ready() -> void:
 	vida_actual = vida_maxima
